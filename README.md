@@ -26,7 +26,7 @@ http://0.0.0.0:8083/static/swagger-ui/index.html#/
 Use the API from:
 ```
 http://0.0.0.0:8083/v1
-http://0.0.0.0:8083/v1/dentist
-http://0.0.0.0:8083/v1/dentist?name=Dr+Green
-http://0.0.0.0:8083/v1/dentist/2
+http://0.0.0.0:8083/v1/dentists
+http://0.0.0.0:8083/v1/dentists?name=Dr+Green
+http://0.0.0.0:8083/v1/dentists/2
 ```

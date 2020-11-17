@@ -6,7 +6,7 @@ from flask import g
 from . import Resource, dentists
 
 
-class Dentist(Resource):
+class Dentists(Resource):
 
     @staticmethod
     def get():

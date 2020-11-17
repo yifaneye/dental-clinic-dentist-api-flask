@@ -17,7 +17,7 @@
     }
   ],
   "paths": {
-    "/dentist": {
+    "/dentists": {
       "get": {
         "produces": [
           "application/json"
@@ -52,7 +52,7 @@
         "operationId": "listDentists"
       }
     },
-    "/dentist/{id}": {
+    "/dentists/{id}": {
       "get": {
         "produces": [
           "application/json"

@@ -14,7 +14,7 @@ securityDefinitions:
 security:
   - basicAuth: []
 paths:
-  /dentist:
+  /dentists:
     get:
       produces:
         - application/json
@@ -37,7 +37,7 @@ paths:
         - dentists
       description: List all dentists
       operationId: listDentists
-  '/dentist/{id}':
+  '/dentists/{id}':
     get:
       produces:
         - application/json

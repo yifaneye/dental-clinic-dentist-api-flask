@@ -4,7 +4,7 @@ from __future__ import absolute_import, print_function
 from . import Resource, dentists
 
 
-class DentistId(Resource):
+class DentistsId(Resource):
 
     @staticmethod
     def get(id):

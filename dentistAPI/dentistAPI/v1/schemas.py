@@ -53,12 +53,12 @@ base_path = '/v1'
 definitions = {'definitions': {'Dentist': {'properties': {'id': {'readOnly': True, 'type': 'integer', 'example': 1, 'description': 'ID of the dentist'}, 'location': {'type': 'string', 'example': 'Syndey', 'description': 'Location of the dentist'}, 'name': {'type': 'string', 'example': 'Dr Green', 'description': 'Name of the dentist'}, 'specialization': {'type': 'string', 'example': 'Orthodontics', 'description': 'Specialization of the dentist'}}, 'required': ['name', 'location', 'specialization'], 'type': 'object'}}, 'parameters': {}}
 
 validators = {
-    ('dentist', 'GET'): {'args': {'required': [], 'properties': {'name': {'description': 'Name of the dentist', 'required': False, 'type': 'string'}}}},
+    ('dentists', 'GET'): {'args': {'required': [], 'properties': {'name': {'description': 'Name of the dentist', 'required': False, 'type': 'string'}}}},
 }
 
 filters = {
-    ('dentist', 'GET'): {200: {'headers': None, 'schema': {'items': {'$ref': '#/definitions/Dentist'}, 'type': 'array'}}, 405: {'headers': None, 'schema': None}},
-    ('dentist_id', 'GET'): {200: {'headers': None, 'schema': {'$ref': '#/definitions/Dentist'}}, 400: {'headers': None, 'schema': None}, 404: {'headers': None, 'schema': None}, 405: {'headers': None, 'schema': None}},
+    ('dentists', 'GET'): {200: {'headers': None, 'schema': {'items': {'$ref': '#/definitions/Dentist'}, 'type': 'array'}}, 405: {'headers': None, 'schema': None}},
+    ('dentists_id', 'GET'): {200: {'headers': None, 'schema': {'$ref': '#/definitions/Dentist'}}, 400: {'headers': None, 'schema': None}, 404: {'headers': None, 'schema': None}, 405: {'headers': None, 'schema': None}},
 }
 
 scopes = {
