@@ -1,15 +1,16 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import, print_function
 
+import json
+
 from flask import request, g
 
-from . import Resource
+from . import Resource, dentists
 from .. import schemas
 
 
 class Dentist(Resource):
 
-    def get(self):
-        print(g.args)
-
-        return [], 200, None
+    @staticmethod
+    def get():
+        return dentists, 200, None
