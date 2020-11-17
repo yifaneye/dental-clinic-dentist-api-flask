@@ -3,12 +3,15 @@ from __future__ import absolute_import, print_function
 
 from flask import request, g
 
-from . import Resource
+from . import Resource, dentists
 from .. import schemas
 
 
 class DentistId(Resource):
 
     def get(self, id):
-
-        return {'location': 'something', 'name': 'something', 'specialization': 'something'}, 200, None
+        requestedID = id
+        for dentist in dentists:
+            if str(dentist['id']) == requestedID:
+                return dentist, 200, None
+        return {}, 404, None
