@@ -1,0 +1,120 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Dentist API",
+    "version": "1.0.0",
+    "description": "API for listing dentists and retrieving each dentist"
+  },
+  "basePath": "/v1",
+  "securityDefinitions": {
+    "basicAuth": {
+      "type": "basic"
+    }
+  },
+  "security": [
+    {
+      "basicAuth": []
+    }
+  ],
+  "paths": {
+    "/dentist": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "description": "Name of the dentist",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "items": {
+                "$ref": "#/definitions/Dentist"
+              },
+              "type": "array"
+            }
+          },
+          "405": {
+            "description": "Prohibited HTTP method is used"
+          }
+        },
+        "tags": [
+          "dentists"
+        ],
+        "description": "List all dentists",
+        "operationId": "listDentists"
+      }
+    },
+    "/dentist/{id}": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "description": "A unique integer value identifying this dentist.",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Dentist"
+            }
+          },
+          "400": {
+            "description": "Bad request (invalid dentist ID)"
+          },
+          "404": {
+            "description": "Dentist with the provided ID is not found"
+          },
+          "405": {
+            "description": "Prohibited HTTP method is used"
+          }
+        },
+        "tags": [
+          "dentists"
+        ],
+        "description": "Retrieve a dentist by id",
+        "operationId": "retrieveDentist"
+      }
+    }
+  },
+  "definitions": {
+    "Dentist": {
+      "properties": {
+        "id": {
+          "readOnly": true,
+          "type": "integer"
+        },
+        "location": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "specialization": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "location",
+        "specialization"
+      ],
+      "type": "object"
+    }
+  },
+  "x-components": {}
+}
