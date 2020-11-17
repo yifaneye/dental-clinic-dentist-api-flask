@@ -50,7 +50,7 @@ class RefNode(object):
 
 base_path = '/v1'
 
-definitions = {'definitions': {'Dentist': {'properties': {'id': {'readOnly': True, 'type': 'integer'}, 'location': {'type': 'string'}, 'name': {'type': 'string'}, 'specialization': {'type': 'string'}}, 'required': ['name', 'location', 'specialization'], 'type': 'object'}}, 'parameters': {}}
+definitions = {'definitions': {'Dentist': {'properties': {'id': {'readOnly': True, 'type': 'integer', 'example': 1, 'description': 'ID of the dentist'}, 'location': {'type': 'string', 'example': 'Syndey', 'description': 'Location of the dentist'}, 'name': {'type': 'string', 'example': 'Dr Green', 'description': 'Name of the dentist'}, 'specialization': {'type': 'string', 'example': 'Orthodontics', 'description': 'Specialization of the dentist'}}, 'required': ['name', 'location', 'specialization'], 'type': 'object'}}, 'parameters': {}}
 
 validators = {
     ('dentist', 'GET'): {'args': {'required': [], 'properties': {'name': {'description': 'Name of the dentist', 'required': False, 'type': 'string'}}}},

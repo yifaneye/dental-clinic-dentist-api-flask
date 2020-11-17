@@ -96,16 +96,24 @@
       "properties": {
         "id": {
           "readOnly": true,
-          "type": "integer"
+          "type": "integer",
+          "example": 1,
+          "description": "ID of the dentist"
         },
         "location": {
-          "type": "string"
+          "type": "string",
+          "example": "Syndey",
+          "description": "Location of the dentist"
         },
         "name": {
-          "type": "string"
+          "type": "string",
+          "example": "Dr Green",
+          "description": "Name of the dentist"
         },
         "specialization": {
-          "type": "string"
+          "type": "string",
+          "example": "Orthodontics",
+          "description": "Specialization of the dentist"
         }
       },
       "required": [
