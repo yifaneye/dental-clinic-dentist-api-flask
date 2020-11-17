@@ -6,7 +6,7 @@ info:
 schemes:
   - http
   - https
-host: 'localhost:5000'
+host: 'localhost:5001'
 basePath: '/v1'
 securityDefinitions:
   basicAuth:
@@ -26,7 +26,7 @@ paths:
           type: string
       responses:
         '200':
-          description: ''
+          description: Successfully listed dentists
           schema:
             items:
               $ref: '#/definitions/Dentist'
@@ -43,13 +43,13 @@ paths:
         - application/json
       parameters:
         - name: id
-          description: A unique integer value identifying this dentist.
+          description: A unique integer value identifying this dentist
           in: path
           required: true
           type: string
       responses:
         '200':
-          description: ''
+          description: Successfully retrieved dentists
           schema:
             $ref: '#/definitions/Dentist'
         '400':
@@ -60,7 +60,7 @@ paths:
           description: Prohibited HTTP method is used
       tags:
         - dentists
-      description: Retrieve a dentist by id
+      description: Retrieve a dentist by ID
       operationId: retrieveDentist
 definitions:
   Dentist:

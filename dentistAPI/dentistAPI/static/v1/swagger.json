@@ -33,7 +33,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Successfully listed dentists",
             "schema": {
               "items": {
                 "$ref": "#/definitions/Dentist"
@@ -60,7 +60,7 @@
         "parameters": [
           {
             "name": "id",
-            "description": "A unique integer value identifying this dentist.",
+            "description": "A unique integer value identifying this dentist",
             "in": "path",
             "required": true,
             "type": "string"
@@ -68,7 +68,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Successfully retrieved dentists",
             "schema": {
               "$ref": "#/definitions/Dentist"
             }
@@ -86,7 +86,7 @@
         "tags": [
           "dentists"
         ],
-        "description": "Retrieve a dentist by id",
+        "description": "Retrieve a dentist by ID",
         "operationId": "retrieveDentist"
       }
     }
