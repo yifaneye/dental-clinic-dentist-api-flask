@@ -1,12 +1,9 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import, print_function
 
-import json
-
-from flask import request, g
+from flask import g
 
 from . import Resource, dentists
-from .. import schemas
 
 
 class Dentist(Resource):
